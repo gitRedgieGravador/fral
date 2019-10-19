@@ -50,6 +50,12 @@
                     </v-list-item-icon>
                     <v-list-item-title>Portfolio Report</v-list-item-title>
                   </v-list-item>
+                  <v-list-item link class="ml-6">
+                    <v-list-item-icon>
+                      <v-icon>mdi-chart-pie</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>Deliquency<br> Report</v-list-item-title>
+                  </v-list-item>
                 </v-list>
               </v-expansion-panel-content>
             </v-expansion-panel>
