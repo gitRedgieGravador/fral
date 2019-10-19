@@ -2,7 +2,9 @@
   <div>
     <v-app-bar fixed app>
       <v-toolbar-title>
-        <span>FRAL Lending Services</span>
+        <v-btn text>
+          <span>FRAL Lending Services</span>
+        </v-btn>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text color="red">
