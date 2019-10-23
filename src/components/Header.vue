@@ -3,6 +3,7 @@
     <v-app-bar fixed app>
       <v-toolbar-title>
         <v-btn text>
+          <v-icon>mdi-home</v-icon>
           <span>FRAL Lending Services</span>
         </v-btn>
       </v-toolbar-title>

@@ -1,14 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Admin from '../views/Admin.vue'
+import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [{
-    path: '/',
-    name: 'admin',
-    component: Admin
-}]
+        path: '/',
+        name: 'home',
+        component: Home
+    },
+    {
+        path: '/admin',
+        name: 'admin',
+        component: Admin
+    }
+]
 
 const router = new VueRouter({
     mode: 'history',
