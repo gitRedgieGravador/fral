@@ -11,6 +11,9 @@
         <div v-if="ispayment">
           <Payment/>
         </div>
+        <div v-if="isaddclient">
+          <Addclient/>
+        </div>
       </v-col>
     </v-row>
   </div>
@@ -20,17 +23,20 @@
 import Sidebar from "../components/Sidebar.vue";
 import Dashboard from "../modules/admin/Dashboard.vue";
 import Payment from "../modules/admin/Payment.vue";
+import Addclient from "../modules/admin/Addclient.vue";
 export default {
   name: "admin",
   components: {
     Sidebar,
     Dashboard,
-    Payment
+    Payment,
+    Addclient
   },
   data(){
     return{
       isdashboard: false,
-      ispayment: true
+      ispayment: false,
+      isaddclient: true
     }
   },
   methods:{

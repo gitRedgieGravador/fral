@@ -23,6 +23,12 @@
           </v-list-item-icon>
           <v-list-item-title>Dashboard</v-list-item-title>
         </v-list-item>
+        <v-list-item link class="ml-6" v-on:click="gotoaddclient">
+          <v-list-item-icon>
+            <v-icon>mdi-account-edit</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Add Client</v-list-item-title>
+        </v-list-item>
         <v-list-item link class="ml-6" v-on:click="gotopayment">
           <v-list-item-icon>
             <v-icon>mdi-currency-usd</v-icon>
@@ -83,6 +89,9 @@ export default {
     },
     gotopayment(){
       this.$emit('gotopayment');
+    },
+    gotoaddclient(){
+      this.$emit('gotoaddclient');
     }
   }
 };
