@@ -1,11 +1,9 @@
 <template>
   <div>
-    <br>
     <center>
       <h1>Register Client Information</h1>
     </center>
-    <v-card width="95%" class="pl-4 pr-4 overflow-y-auto" max-height="750">
-
+    <v-card width="95%" class="pl-4 pr-4 overflow-y-auto" max-height="750" dark>
           <v-form>
             <br>
             <v-row>

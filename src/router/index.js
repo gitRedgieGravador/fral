@@ -1,19 +1,31 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Admin from '../views/Admin.vue'
+//import Admin from '../views/Admin.vue'
 import Home from '../views/Home.vue'
+import Dashboard from '@/modules/admin/Dashboard.vue'
+import AddClient from '@/modules/admin/Addclient.vue'
+import Payment from '@/modules/admin/Payment.vue'
 
 Vue.use(VueRouter)
 
-const routes = [{
+const routes = [
+    {
         path: '/',
         name: 'home',
         component: Home
     },
     {
-        path: '/admin',
-        name: 'admin',
-        component: Admin
+        path: '/admin/dashboard',
+        name: "dashboard",
+        component: Dashboard,
+    },
+    {
+        path: '/admin/add-client',
+        component: AddClient
+    },
+    {
+        path: '/admin/payment',
+        component: Payment
     }
 ]
 
