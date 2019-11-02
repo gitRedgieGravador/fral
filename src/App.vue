@@ -37,6 +37,16 @@ export default {
       isLogout: true
     };
   },
+  beforeUpdate(){
+    this.routeWatcher = this.$watch(
+    function () {  return this.$route },
+    function(route) {
+      if (route.name === 'login') {
+        this.isLogout = true
+      }
+    }
+  )
+  },
   methods:{
     login(){
       this.isLogout = false
