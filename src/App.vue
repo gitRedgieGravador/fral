@@ -2,7 +2,7 @@
   <v-app>
     <Header v-on:logout="logout" />
     <div v-if="isLogout"><br><br><b></b><br>
-      <Home v-on:login="login"/>
+      <Login v-on:login="login"/>
     </div>
     <div v-else>
       <v-row>
@@ -22,14 +22,15 @@
 <script>
 import Header from "./components/Header.vue";
 import Sidebar from "./components/Sidebar.vue";
-import Home from "./views/Home.vue";
+import Login from "./views/Login.vue";
+
 
 export default {
   name: "App",
   components: {
     Header,
     Sidebar,
-    Home
+    Login
   },
   data() {
     return {

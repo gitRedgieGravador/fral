@@ -30,6 +30,12 @@
             </v-list-item-icon>
             <v-list-item-title>Add Client</v-list-item-title>
           </v-list-item>
+          <v-list-item link class="ml-6" v-on:click="gotoRoute('/admin/offer-loan')">
+            <v-list-item-icon>
+              <v-icon>mdi-account-edit</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Offer Loan</v-list-item-title>
+          </v-list-item>
           <v-list-item link class="ml-6" v-on:click="gotoRoute('/admin/payment')">
             <v-list-item-icon>
               <v-icon>mdi-currency-usd</v-icon>
