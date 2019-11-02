@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <Header v-on:logout="logout" />
-    <div v-if="isLogout"><br><br><b></b><br>
-      <Login v-on:login="login"/>
+    <div v-if="!loggedIn"><br><br><b></b><br>
+      <Login/>
     </div>
     <div v-else>
       <v-row>
@@ -37,6 +37,11 @@ export default {
       isLogout: true
     };
   },
+  computed:{
+    loggedIn(){
+      return this.$store.getter.loggedIn
+    }
+  },
   beforeUpdate(){
     this.routeWatcher = this.$watch(
     function () {  return this.$route },
@@ -48,10 +53,10 @@ export default {
   )
   },
   methods:{
-    login(){
-      this.isLogout = false
-      this.$router.push({path: "/admin/dashboard"})
-    },
+    // login(){
+    //   this.isLogout = false
+    //   this.$router.push({path: "/admin/dashboard"})
+    // },
     logout(){
       this.isLogout = true
       this.$router.push({path: "/"})

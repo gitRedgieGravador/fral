@@ -11,11 +11,11 @@
         </v-card>
         <hr>
         <div class="custom">
-          <v-text-field outlined label="Username"/>
-          <v-text-field outlined label="Password"/>
+          <v-text-field outlined label="Username" v-model="username"/>
+          <v-text-field outlined label="Password" v-model="password"/>
         </div>
         <v-footer absolute dark>
-          <v-btn block large color="primary" v-on:click="$emit('login')">login</v-btn>
+          <v-btn block large color="primary" v-on:click="login">login</v-btn>
         </v-footer>
       </v-card>
     </center>
@@ -24,8 +24,27 @@
 <script>
 export default {
   name: "home",
-  created() {
-    //this.$router.push({path: "/admin"})
+  data() {
+    return {
+      username: "",
+      password: ""
+    };
+  },
+  methods: {
+    login() {
+      if (this.username != "" && this.password != "") {
+        this.$store
+          .dispatch("login", {
+            username: this.username,
+            password: this.password
+          })
+          .then(() => {
+            this.$router.push({ name: "dashboard" });
+          });
+      }else {
+        alert("required")
+      }
+    }
   }
 };
 </script>
