@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
-mongoose.connect('mongodb://localhost/fral',{
+const url = 'mongodb://localhost/fral';
+mongoose.connect(url,{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
 }).then(() =>{
-  console.log('connected to database');
+  console.log('Database @: '+ url);
 }).catch(() =>{
   console.log('failed connected to database');
 });

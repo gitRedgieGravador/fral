@@ -1,5 +1,5 @@
 const mongoose  = require('mongoose')
-require('../auth/auth')
+
 const UserSchema  = new mongoose.Schema({
     name:{
         type: String,
