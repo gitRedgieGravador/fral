@@ -32,18 +32,19 @@ export default {
   },
   methods: {
     login() {
-      if (this.username != "" && this.password != "") {
-        this.$store
-          .dispatch("login", {
-            username: this.username,
-            password: this.password
-          })
-          .then(() => {
-            this.$router.push({ name: "dashboard" });
-          });
-      }else {
-        alert("required")
-      }
+      this.$emit('login')
+      // if (this.username != "" && this.password != "") {
+      //   this.$store
+      //     .dispatch("login", {
+      //       username: this.username,
+      //       password: this.password
+      //     })
+      //     .then(() => {
+      //       this.$router.push({ name: "dashboard" });
+      //     });
+      // }else {
+      //   alert("required")
+      // }
     }
   }
 };

@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <Header v-on:logout="logout" />
-    <div v-if="!loggedIn"><br><br><b></b><br>
-      <Login/>
+    <div v-if="isLogout"><br><br><b></b><br>
+      <Login v-on:login="login"/>
     </div>
     <div v-else>
       <v-row>
@@ -53,10 +53,10 @@ export default {
   )
   },
   methods:{
-    // login(){
-    //   this.isLogout = false
-    //   this.$router.push({path: "/admin/dashboard"})
-    // },
+    login(){
+      this.isLogout = false
+      this.$router.push({path: "/admin/dashboard"})
+    },
     logout(){
       this.isLogout = true
       this.$router.push({path: "/"})
