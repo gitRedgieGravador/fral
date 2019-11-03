@@ -2,7 +2,7 @@ const express     = require('express')
 const userRoutes = require('./routes/UserRoute')
 
 const app   = express();
-const port  =  process.env.PORT || 3232
+const port  =  process.env.PORT || 3000
 
 require('./db/mongo');
 app.use(express.json())

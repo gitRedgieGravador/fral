@@ -23,7 +23,7 @@
 import Header from "./components/Header.vue";
 import Sidebar from "./components/Sidebar.vue";
 import Login from "./views/Login.vue";
-
+import axios from 'axios'
 
 export default {
   name: "App",
@@ -61,6 +61,18 @@ export default {
       this.isLogout = true
       this.$router.push({path: "/"})
     }
+  },
+  created(){//tested the server
+    axios.post('http://localhost:3000/users', {
+      name: "redgie",
+      age: 12,
+      email: "sample@gmail.com",
+      password: "mypassword"
+    }).then(response => {
+      alert(response.data)
+    }).catch((XMLHttpRequest, textStatus, errorThrown) => {
+      alert(textStatus, errorThrown)
+    })
   }
 };
 </script>
